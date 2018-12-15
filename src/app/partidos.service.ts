@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class PartidosService {
 
-  private serverUrl = 'http://localhost:5000/partidos';
+  private serverUrl = 'http://localhost:5000/api/partidos';
   public updateList = new Subject();
 
   constructor(private httpClient: HttpClient) {
