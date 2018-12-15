@@ -1,0 +1,33 @@
+<div class="modal-containar" *ngIf="partido && partidoForm">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left" *ngIf="!partido.id">Cadastrar partido</h4>
+    <h4 class="modal-title pull-left" *ngIf="partido.id">Atualizar partido</h4>
+    <button type="button" class="close pull-right" aria-label="Fechar" (click)="close()">
+      <i class="eva eva-close-outline"></i>
+    </button>
+  </div>
+  <form [formGroup]="partidoForm" (ngSubmit)="save()">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" formControlName="nome" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="sigla">Sigla</label>
+        <input type="text" id="sigla" formControlName="sigla" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="numero">Número</label>
+        <input type="number" id="numero" formControlName="numero" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="fundo">Fundo</label>
+        <input type="number" id="fundo" formControlName="fundo" class="form-control">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" (click)="close()">Cancelar</button>
+      <button type="submit" class="btn btn-outline-primary">Salvar</button>
+    </div>
+  </form>
+</div>

@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.modal-header {
+  display: none !important;
+}
+
+.modal-body {
+  min-width: 400px;
+}
+
+.modal-containar > .modal-header {
+  display: flex !important;
+}
+
+.w-10 {
+  width: 10% !important;
+}

@@ -1,0 +1,30 @@
+<section class="default-remove-modal">
+
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Excluir</h4>
+    <button type="button" class="close pull-right" aria-label="Fechar" (click)="close()">
+      <i class="eva eva-close-outline"></i>
+    </button>
+  </div>
+  <section class="modal-body mb-2">
+    <div class="custom-message">
+      <div class="message">
+        Deseja realmente remover o item selecionado?
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-footer">
+    <div class="btn-group">
+      <button class="btn btn-outline-secondary"
+              (click)="close()" type="button">
+        Cancelar
+      </button>
+      <button class="btn btn-outline-primary"
+              type="button" (click)="confirm()">
+        Confirmar
+      </button>
+    </div>
+
+  </div>
+</section>
